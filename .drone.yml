@@ -1,0 +1,16 @@
+kind: pipeline
+name: default
+
+platform:
+  os: linux
+  arch: arm
+
+steps:
+- name: docker
+  image: plugins/docker
+  settings:
+    repo: rkojedzinszky/alpine-python-grpcio
+    username: rkojedzinszky
+    password:
+      from_secret: hub_docker_password
+    auto_tag: true
