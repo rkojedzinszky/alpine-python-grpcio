@@ -1,4 +1,4 @@
-FROM alpine:3.9
+FROM alpine:edge
 MAINTAINER Richard Kojedzinszky <richard@kojedz.in>
 
 # Install python3
