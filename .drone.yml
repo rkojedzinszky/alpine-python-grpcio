@@ -14,10 +14,3 @@ steps:
     password:
       from_secret: hub_docker_password
     auto_tag: true
-  volumes:
-  - name: docker
-    path: /var/lib/docker
-
-volumes:
-- name: docker
-  temp: {}
