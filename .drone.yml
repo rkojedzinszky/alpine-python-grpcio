@@ -1,5 +1,5 @@
 kind: pipeline
-name: default
+name: build-armhf
 
 platform:
   os: linux
@@ -14,3 +14,25 @@ steps:
     password:
       from_secret: hub_docker_password
     auto_tag: true
+    auto_tag_suffix: armhf
+
+---
+kind: pipeline
+name: manifest
+
+platform:
+  os: linux
+  arch: arm
+
+steps:
+- name: manifest
+  image: plugins/manifest
+  settings:
+    auto_tag: true
+    spec: manifests/manifest.image.tmpl
+    username: rkojedzinszky
+    password:
+      from_secret: hub_docker_password
+
+depends_on:
+- build-armhf
