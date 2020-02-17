@@ -1,5 +1,6 @@
-FROM alpine:3.10
-MAINTAINER Richard Kojedzinszky <richard@kojedz.in>
+FROM alpine:3.11
+
+LABEL maintainer="Richard Kojedzinszky <richard@kojedz.in>"
 
 # Install python3
 RUN apk add --no-cache python3 && \
