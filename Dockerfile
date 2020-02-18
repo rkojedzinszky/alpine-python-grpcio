@@ -1,4 +1,5 @@
-FROM alpine:3.10
+FROM alpine:3.10.4
+
 MAINTAINER Richard Kojedzinszky <richard@kojedz.in>
 
 # Install python3
