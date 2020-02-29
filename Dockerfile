@@ -4,8 +4,7 @@ LABEL maintainer="Richard Kojedzinszky <richard@kojedz.in>"
 
 # Install python3
 RUN apk add --no-cache python3 && \
-    ln -sf python3 /usr/bin/python && ln -sf pip3 /usr/bin/pip && \
-    pip install -U pip
+    ln -sf python3 /usr/bin/python && ln -sf pip3 /usr/bin/pip
 
 # Install grpcio and protobuf from source
 RUN apk --no-cache add libstdc++ && \
