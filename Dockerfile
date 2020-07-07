@@ -1,9 +1,9 @@
-FROM alpine:3.11.5
+FROM alpine:3.12.0
 
 LABEL maintainer="Richard Kojedzinszky <richard@kojedz.in>"
 
 # Install python3
-RUN apk add --no-cache python3 && \
+RUN apk add --no-cache py3-pip && \
     ln -sf python3 /usr/bin/python && ln -sf pip3 /usr/bin/pip
 
 # Install grpcio and protobuf from source
