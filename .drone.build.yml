@@ -7,8 +7,9 @@ steps:
 - name: docker
   image: plugins/docker
   settings:
-    repo: rkojedzinszky/alpine-python-grpcio
+    repo: ghcr.io/rkojedzinszky/alpine-python-grpcio
+    registry: ghcr.io
     username: rkojedzinszky
     password:
-      from_secret: hub_docker_password
+      from_secret: ghcr.io.password
     auto_tag: true
